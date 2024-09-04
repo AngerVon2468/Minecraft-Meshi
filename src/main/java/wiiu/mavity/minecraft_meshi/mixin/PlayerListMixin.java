@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerList.class)
 public abstract class PlayerListMixin {
 
-    @Shadow public abstract void broadcastSystemMessage(Component p_240618_, boolean p_240644_);
+    @Shadow public abstract void broadcastSystemMessage(Component text, boolean idkWhatThisDoes);
 
     @Inject(method = "placeNewPlayer", at = @At("TAIL"))
     public void placeNewPlayer(Connection connection, @NotNull ServerPlayer player, CallbackInfo ci) {

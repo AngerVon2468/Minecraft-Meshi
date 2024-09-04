@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import wiiu.mavity.minecraft_meshi.item.ItemInit;
 
 @Mixin(EndDragonFight.class)
-public class EndDragonFightMixin {
+public abstract class EndDragonFightMixin {
 
     @Inject(method = "setDragonKilled", at = @At("TAIL"))
     public void setDragonKilled(@NotNull EnderDragon dragon, CallbackInfo ci) {

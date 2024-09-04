@@ -27,7 +27,7 @@ public class ItemInit {
                     () -> new MobEffectInstance(MobEffects.HUNGER, 2000, 9), 2.9f).meat().build()).stacksTo(64)));
 
     public static final RegistryObject<Item> TREASURE_INSECT = ITEMS.register("treasure_insect",
-            () -> new DragonHeartItem(new Item.Properties().stacksTo(64)));
+            () -> new Item(new Item.Properties().stacksTo(64)));
 
     public static void init(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
