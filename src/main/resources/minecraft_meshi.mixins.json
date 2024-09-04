@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "wiiu.mavity.minecraft_meshi.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "minecraft_meshi.refmap.json",
+  "mixins": [
+    "EndDragonFightMixin",
+    "PlayerListMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
