@@ -20,22 +20,22 @@ public class ItemInit {
     public static final List<RegistryObject<Item>> MOD_ITEMS = new ArrayList<>();
 
     public static final RegistryObject<Item> MONSTER_GUTS = ITEMS.register("monster_guts",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(2).saturationMod(3.7f).effect(
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(2).saturationMod(0.3f).effect(
                     () -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.85f).meat().build())));
 
     public static final RegistryObject<Item> MONSTER_HEART = ITEMS.register("monster_heart",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(0).saturationMod(0.7f).effect(
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(-1).saturationMod(0.1f).effect(
                     () -> new MobEffectInstance(MobEffects.HUNGER, 1000, 3), 2.5f).meat().build())));
 
     public static final RegistryObject<Item> DRAGON_HEART = ITEMS.register("dragon_heart",
-            () -> new DragonHeartItem(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(-3).saturationMod(0.7f).effect(
+            () -> new DragonHeartItem(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(-3).saturationMod(0.2f).effect(
                     () -> new MobEffectInstance(MobEffects.HUNGER, 2000, 9), 2.9f).meat().build())));
 
     public static final RegistryObject<Item> TREASURE_INSECT = ITEMS.register("treasure_insect",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(4).saturationMod(0.3f).meat().build())));
 
     public static final RegistryObject<Item> MONSTER_MEAT_STEW = ITEMS.register("monster_meat_stew",
-            () -> new Item(new Item.Properties().stacksTo(1).durability(0).food(new FoodProperties.Builder().alwaysEat().nutrition(7).saturationMod(4.2f).meat().build())));
+            () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().nutrition(7).saturationMod(1f).meat().build())));
 
     public static void addItemsToList() {
         for (Field field : ItemInit.class.getFields()) {

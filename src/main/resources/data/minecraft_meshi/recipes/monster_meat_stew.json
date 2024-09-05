@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " b ",
+    "##b",
+    " a "
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft_meshi:monster_meat"
+    },
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "tag": "minecraft_meshi:bug_parts"
+    }
+  },
+  "result": {
+    "item": "minecraft_meshi:monster_meat_stew",
+    "count": 1
+  }
+}

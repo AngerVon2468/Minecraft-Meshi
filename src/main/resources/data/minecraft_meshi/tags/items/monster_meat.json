@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:rotten_flesh",
+    "minecraft_meshi:monster_guts",
+    "minecraft_meshi:monster_heart"
+  ]
+}
