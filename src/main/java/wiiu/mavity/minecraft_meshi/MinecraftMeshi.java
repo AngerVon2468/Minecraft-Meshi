@@ -1,10 +1,14 @@
 package wiiu.mavity.minecraft_meshi;
 
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.*;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +23,8 @@ import org.slf4j.*;
 import wiiu.mavity.minecraft_meshi.block.BlockInit;
 import wiiu.mavity.minecraft_meshi.item.ItemInit;
 import wiiu.mavity.minecraft_meshi.tag.TagInit;
+
+import java.util.Random;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MinecraftMeshi.MOD_ID)
@@ -48,6 +54,26 @@ public class MinecraftMeshi {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             for (RegistryObject<Item> item : ItemInit.MOD_ITEMS) {
                 event.accept(item);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onMobDeath(@NotNull LivingDeathEvent event) {
+        LivingEntity entity = event.getEntity();
+        Random random = new Random();
+        Entity entity1 = event.getSource().getEntity() != null ? event.getSource().getEntity() : entity;
+        if (entity1 instanceof Player) {
+            if (entity instanceof Monster) {
+                if (random.nextBoolean()) {
+                    if (random.nextBoolean() && random.nextBoolean()) {
+                        entity.spawnAtLocation(ItemInit.MONSTER_GUTS.get(), 4);
+                    } else if (random.nextBoolean()) {
+                        entity.spawnAtLocation(ItemInit.MONSTER_GUTS.get(), 3);
+                    } else if (random.nextBoolean() && random.nextBoolean()) {
+                        entity.spawnAtLocation(ItemInit.MONSTER_GUTS.get(), 6);
+                    }
+                }
             }
         }
     }
