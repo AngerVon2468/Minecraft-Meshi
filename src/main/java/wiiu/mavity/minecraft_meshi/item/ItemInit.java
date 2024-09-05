@@ -10,9 +10,14 @@ import net.minecraftforge.registries.*;
 import wiiu.mavity.minecraft_meshi.MinecraftMeshi;
 import wiiu.mavity.minecraft_meshi.item.itemtype.DragonHeartItem;
 
+import java.lang.reflect.Field;
+import java.util.*;
+
 public class ItemInit {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinecraftMeshi.MOD_ID);
+
+    public static final List<RegistryObject<Item>> MOD_ITEMS = new ArrayList<>();
 
     public static final RegistryObject<Item> MONSTER_GUTS = ITEMS.register("monster_guts",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().nutrition(2).saturationMod(3.7f).effect(
@@ -29,7 +34,21 @@ public class ItemInit {
     public static final RegistryObject<Item> TREASURE_INSECT = ITEMS.register("treasure_insect",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
+    public static void addItemsToList() {
+        for (Field field : ItemInit.class.getFields()) {
+            if (field.getType().equals(RegistryObject.class)) {
+                field.setAccessible(true);
+                try {
+                    MOD_ITEMS.add((RegistryObject<Item>) field.get(ItemInit.class));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     public static void init(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
+        addItemsToList();
     }
 }

@@ -139,6 +139,7 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven { url = "https://cursemaven.com" }
 }
 
 dependencies {
@@ -159,6 +160,11 @@ dependencies {
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+
+    implementation fg.deobf("curse.maven:alexs-mobs-426558:5160697")
+    implementation fg.deobf("curse.maven:citadel-331936:5633260")
+    implementation fg.deobf("curse.maven:jei-238222:5691218")
+    implementation fg.deobf("curse.maven:appleskin-248787:4770828")
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

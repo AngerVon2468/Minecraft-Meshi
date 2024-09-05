@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#a#",
+    "b#b"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "minecraft:bone"
+    },
+    "a": {
+      "tag": "minecraft_meshi:bug_parts"
+    }
+  },
+  "result": {
+    "item": "minecraft_meshi:treasure_insect",
+    "count": 1
+  }
+}
