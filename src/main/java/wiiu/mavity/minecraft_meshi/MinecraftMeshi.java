@@ -10,8 +10,8 @@ import net.minecraftforge.eventbus.api.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import net.minecraftforge.registries.RegistryObject;
+
 import org.jetbrains.annotations.NotNull;
 
 import org.slf4j.*;
