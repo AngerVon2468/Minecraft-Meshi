@@ -25,7 +25,6 @@ import wiiu.mavity.minecraft_meshi.tag.TagInit;
 
 import java.util.Random;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(MinecraftMeshi.MOD_ID)
 public class MinecraftMeshi {
 
