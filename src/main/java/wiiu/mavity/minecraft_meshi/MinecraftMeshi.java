@@ -20,7 +20,6 @@ import org.jetbrains.annotations.NotNull;
 
 import org.slf4j.*;
 
-import wiiu.mavity.minecraft_meshi.block.BlockInit;
 import wiiu.mavity.minecraft_meshi.item.ItemInit;
 import wiiu.mavity.minecraft_meshi.tag.TagInit;
 
@@ -39,7 +38,6 @@ public class MinecraftMeshi {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemInit.init(modEventBus);
-        BlockInit.init(modEventBus);
         TagInit.init();
 
         modEventBus.addListener(this::commonSetup);

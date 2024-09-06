@@ -8,6 +8,9 @@
     "EndDragonFightMixin",
     "PlayerListMixin"
   ],
+  "client": [
+    "MinecraftClientMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
