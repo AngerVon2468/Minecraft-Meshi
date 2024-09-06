@@ -72,6 +72,9 @@ public class MinecraftMeshi {
                         entity.spawnAtLocation(ItemInit.MONSTER_GUTS.get(), 6);
                     }
                 }
+                if (random.nextBoolean() && random.nextBoolean() && random.nextBoolean()) {
+                    entity.spawnAtLocation(ItemInit.MONSTER_HEART.get(), 2);
+                }
             }
         }
     }

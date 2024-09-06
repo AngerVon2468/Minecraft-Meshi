@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " b ",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "item": "minecraft_meshi:treasure_insect"
+    }
+  },
+  "result": {
+    "item": "minecraft_meshi:fried_treasure_insect",
+    "count": 1
+  }
+}
