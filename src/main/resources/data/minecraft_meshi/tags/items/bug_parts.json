@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
-    "alexsmobs:maggot",
+    "minecraft:ink_sac",
     "minecraft:spider_eye",
+    "minecraft:ghast_tear",
+    "minecraft:phantom_membrane",
+    "alexsmobs:maggot",
     "alexsmobs:cockroach_wing_fragment",
     "alexsmobs:cockroach_wing",
     "alexsmobs:cockroach_ootheca",
-    "minecraft:phantom_membrane",
-    "minecraft:ghast_tear",
     "alexsmobs:blood_sac",
     "alexsmobs:mosquito_proboscis",
-    "minecraft:ink_sac",
-    "minecraft:rotten_flesh"
+    "#minecraft_meshi:monster_meat"
   ]
 }

@@ -1,8 +1,9 @@
 {
   "replace": false,
   "values": [
-    "minecraft:carrot",
-    "minecraft:potato",
+    "#forge:crops/beetroot",
+    "#forge:crops/carrot",
+    "#forge:crops/potato",
     "#forge:mushrooms"
   ]
 }
