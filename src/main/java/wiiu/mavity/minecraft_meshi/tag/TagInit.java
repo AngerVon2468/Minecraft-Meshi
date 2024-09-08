@@ -14,6 +14,8 @@ public class TagInit {
 
     public static final TagKey<Item> MONSTER_MEAT = registerTag("monster_meat");
 
+    public static final TagKey<Item> VEGGIES = registerTag("veggies");
+
     private static @NotNull TagKey<Item> registerTag(String name) {
         return ItemTags.create(new ResourceLocation("minecraft_meshi", name));
     }

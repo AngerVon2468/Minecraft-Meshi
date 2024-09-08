@@ -40,10 +40,12 @@ public class ItemInit {
     public static final RegistryObject<Item> FRIED_TREASURE_INSECT = ITEMS.register("fried_treasure_insect",
             () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().nutrition(6).saturationMod(0.7f).meat().build())));
 
+    public static final RegistryObject<Item> MONSTER_VEGGIE_STEW = ITEMS.register("monster_veggie_stew",
+            () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().nutrition(8).saturationMod(1f).meat().build())));
+
     public static void addItemsToList() {
         for (Field field : ItemInit.class.getFields()) {
             if (field.getType().equals(RegistryObject.class)) {
-                field.setAccessible(true);
                 try {
                     MOD_ITEMS.add((RegistryObject<Item>) field.get(ItemInit.class));
                 } catch (IllegalAccessException e) {
