@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    " b ",
+    " # ",
+    "#b#",
     " a "
   ],
   "key": {
@@ -11,6 +11,9 @@
     },
     "b": {
       "item": "minecraft_meshi:treasure_insect"
+    },
+    "#": {
+      "tag": "minecraft_meshi:bug_parts"
     }
   },
   "result": {

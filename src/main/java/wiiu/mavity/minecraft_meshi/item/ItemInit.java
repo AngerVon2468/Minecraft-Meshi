@@ -39,7 +39,8 @@ public class ItemInit {
                     () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0), 0.4f).nutrition(7).saturationMod(1f).meat().build())));
 
     public static final RegistryObject<Item> FRIED_TREASURE_INSECT = ITEMS.register("fried_treasure_insect",
-            () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().nutrition(6).saturationMod(0.7f).meat().build())));
+            () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
+                    () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 250, 0), 0.45f).nutrition(6).saturationMod(0.7f).meat().build())));
 
     public static final RegistryObject<Item> MONSTER_VEGGIE_STEW = ITEMS.register("monster_veggie_stew",
             () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
