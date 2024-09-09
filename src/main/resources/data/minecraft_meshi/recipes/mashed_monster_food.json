@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#e#",
+    "bcd",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "item": "minecraft_meshi:fried_treasure_insect"
+    },
+    "c": {
+      "item": "minecraft_meshi:monster_meat_stew"
+    },
+    "d": {
+      "item": "minecraft_meshi:monster_veggie_stew"
+    },
+    "e": {
+      "item": "minecraft_meshi:dragon_heart"
+    },
+    "#": {
+      "tag": "minecraft_meshi:bug_parts"
+    }
+  },
+  "result": {
+    "item": "minecraft_meshi:mashed_monster_food",
+    "count": 1
+  }
+}

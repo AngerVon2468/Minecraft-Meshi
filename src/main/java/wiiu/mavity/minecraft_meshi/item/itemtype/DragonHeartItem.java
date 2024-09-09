@@ -19,7 +19,6 @@ public class DragonHeartItem extends Item {
         super.use(world, player, hand);
         if (!world.isClientSide()) {
             player.sendSystemMessage(Component.literal("What the fuck why did you eat that"));
-            player.giveExperienceLevels(13);
             player.hurt(player.damageSources().magic(), 7.0f);
         }
         return super.use(world, player, hand);

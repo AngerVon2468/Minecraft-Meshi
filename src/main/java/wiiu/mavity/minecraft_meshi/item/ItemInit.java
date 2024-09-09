@@ -40,11 +40,15 @@ public class ItemInit {
 
     public static final RegistryObject<Item> FRIED_TREASURE_INSECT = ITEMS.register("fried_treasure_insect",
             () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
-                    () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 250, 0), 0.45f).nutrition(6).saturationMod(0.7f).meat().build())));
+                    () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 250, 2), 0.45f).nutrition(6).saturationMod(0.7f).meat().build())));
 
     public static final RegistryObject<Item> MONSTER_VEGGIE_STEW = ITEMS.register("monster_veggie_stew",
             () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
                     () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 350, 2), 0.6f).nutrition(8).saturationMod(1f).meat().build())));
+
+    public static final RegistryObject<Item> MASHED_MONSTER_FOOD = ITEMS.register("mashed_monster_food",
+            () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
+                    () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2048, 8), 1f).nutrition(10).saturationMod(1f).meat().fast().build())));
 
     public static void addItemsToList() {
         for (Field field : ItemInit.class.getFields()) {
