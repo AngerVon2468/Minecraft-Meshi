@@ -18,8 +18,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import org.jetbrains.annotations.NotNull;
 
-import org.slf4j.*;
-
 import wiiu.mavity.minecraft_meshi.item.ItemInit;
 import wiiu.mavity.minecraft_meshi.tag.TagInit;
 
@@ -29,8 +27,6 @@ import java.util.Random;
 public class MinecraftMeshi {
 
     public static final String MOD_ID = "minecraft_meshi";
-
-    private static final Logger LOGGER = LoggerFactory.getLogger("Minecraft Meshi");
 
     public MinecraftMeshi() {
 

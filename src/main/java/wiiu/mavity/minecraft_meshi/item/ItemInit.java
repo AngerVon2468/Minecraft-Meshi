@@ -51,8 +51,8 @@ public class ItemInit {
             if (field.getType().equals(RegistryObject.class)) {
                 try {
                     MOD_ITEMS.add((RegistryObject<Item>) field.get(ItemInit.class));
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
+                } catch (IllegalAccessException illegalAccessException) {
+                    throw new RuntimeException(illegalAccessException);
                 }
             }
         }
