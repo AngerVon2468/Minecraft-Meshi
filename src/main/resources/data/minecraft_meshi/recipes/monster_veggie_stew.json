@@ -10,7 +10,7 @@
       "tag": "minecraft_meshi:monster_meat"
     },
     "a": {
-      "item": "minecraft:bowl"
+      "item": "minecraft_meshi:monster_meat_stew"
     },
     "b": {
       "tag": "minecraft_meshi:veggies"
