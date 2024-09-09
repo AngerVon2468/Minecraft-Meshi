@@ -8,6 +8,8 @@ import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static wiiu.mavity.minecraft_meshi.util.Util.condition;
+
 @Mixin(Minecraft.class)
 public abstract class MinecraftClientMixin {
 
@@ -17,7 +19,7 @@ public abstract class MinecraftClientMixin {
     public void createTitle(@NotNull CallbackInfoReturnable<String> cir) {
         String original = cir.getReturnValue();
         String name = this.getUser().getName();
-        String title = name.equals("EpicVon") || name.equals("EpicVon2468") || name.equals("Dev") ? original.replace("Minecraft Forge*", "Minecraft") : original;
+        String title = condition() ? original.replace("Minecraft Forge*", "Minecraft") : original;
         cir.setReturnValue(title);
     }
 }

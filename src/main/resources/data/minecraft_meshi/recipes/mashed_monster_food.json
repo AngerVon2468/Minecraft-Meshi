@@ -3,7 +3,7 @@
   "pattern": [
     "#e#",
     "bcd",
-    " a "
+    "1a1"
   ],
   "key": {
     "a": {
@@ -20,6 +20,9 @@
     },
     "e": {
       "item": "minecraft_meshi:dragon_heart"
+    },
+    "1": {
+      "item": "minecraft:emerald_block"
     },
     "#": {
       "tag": "minecraft_meshi:bug_parts"

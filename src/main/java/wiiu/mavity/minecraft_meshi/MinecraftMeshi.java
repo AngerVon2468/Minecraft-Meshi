@@ -23,6 +23,8 @@ import wiiu.mavity.minecraft_meshi.tag.TagInit;
 
 import java.util.Random;
 
+import static wiiu.mavity.minecraft_meshi.util.Util.condition2;
+
 @Mod(MinecraftMeshi.MOD_ID)
 public class MinecraftMeshi {
 
@@ -32,7 +34,7 @@ public class MinecraftMeshi {
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ItemInit.init(modEventBus);
+        ItemInit.init();
         TagInit.init();
 
         modEventBus.addListener(this::commonSetup);
@@ -46,7 +48,9 @@ public class MinecraftMeshi {
     private void creativeModeTabSetup(@NotNull BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             for (RegistryObject<Item> item : ItemInit.MOD_ITEMS) {
-                event.accept(item);
+                if (condition2(item)) {
+                    event.accept(item);
+                }
             }
         }
     }
