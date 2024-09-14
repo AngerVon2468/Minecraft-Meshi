@@ -12,7 +12,7 @@ public class Util {
     }
 
     public static boolean condition2(RegistryObject<Item> item) {
-        return nullSafe(item) && !item.getId().getPath().equals("mashed_monster_food") && condition();
+        return nullSafe(item) && !item.getId().getPath().equals("mashed_monster_food");
     }
 
     public static boolean nullSafe(Object o) {

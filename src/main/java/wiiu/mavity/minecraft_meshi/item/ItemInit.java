@@ -48,7 +48,8 @@ public class ItemInit {
 
     public static final RegistryObject<Item> MASHED_MONSTER_FOOD = ITEMS.register("mashed_monster_food",
             () -> new Item(new Item.Properties().durability(0).food(new FoodProperties.Builder().alwaysEat().effect(
-                    () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2048, 9), 1f).nutrition(10).saturationMod(1f).meat().build())));
+                    () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2048, 9), 0.5f).effect(
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2048, 9), 0.5f).nutrition(10).saturationMod(1f).meat().build())));
 
     public static void addItemsToList() {
         for (Field field : ItemInit.class.getFields()) {
